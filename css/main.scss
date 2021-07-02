@@ -8,31 +8,31 @@ $font-primary: 'Inter', sans-serif;
 $font-secondary: 'Lexend Deca', sans-serif;
 
 .bg {
-  font-size: 15px;
+  font-size: 1rem;
   background-color: #090b1a;
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-content: center;
-  padding: 160px;
+  align-items: center;
 
   .container {
     display: flex;
+    background-color: #1b1938;
+    height: 400px;
+    width: 1000px;
+    border-radius: 10px;
 
     .information {
-      display: block;
-      align-content: center;
-      justify-content: center;
-      background-color: #1b1938;
-      padding: 70px 91px 70px 70px;
-      border-radius: 10px 0 0 10px;
+      margin: 4.5rem;
 
       .text {
+        margin-bottom: 3.5rem;
+
         h1 {
           color: #ffffff;
           font-family: $font-primary;
-          font-weight: 700;
-          font-size: 36px;
+          font-size: 2rem;
+          margin-bottom: 1.5rem;
 
           span {
             color: #aa5cdb;
@@ -40,33 +40,28 @@ $font-secondary: 'Lexend Deca', sans-serif;
         }
 
         p {
-          font-family: $font-secondary;
-          font-weight: 400;
-          line-height: 25px;
-          font-size: 15px;
           color: #ffffff99;
-          margin-top: 30px;
-          margin-bottom: 40px;
+          font-family: $font-primary;
+          font-size: 0.9rem;
+          line-height: 1.5rem;
         }
       }
 
       .data {
         display: flex;
-        align-content: center;
-        padding-top: 50px;
+        justify-content: space-between;
 
         .info {
-          margin-right: 50px;
-
           h2 {
             color: #ffffff;
             font-family: $font-primary;
-            margin-bottom: 10px;
+            margin-bottom: 0.5rem;
           }
 
           p {
             color: #ffffff99;
             font-family: $font-secondary;
+            font-size: 0.7rem;
             text-transform: uppercase;
           }
         }
@@ -74,25 +69,14 @@ $font-secondary: 'Lexend Deca', sans-serif;
     }
 
     .bg-image {
-      background-color: #be58fd;
-      border-radius: 0 10px 10px 0;
+      width: 50%;
+      background-color: #aa5cdb;
+
       img {
-        height: 100%;
         opacity: 0.4;
-        border-radius: 0 10px 10px 0;
       }
     }
   }
 }
 
 /* RESPONSIVO */
-
-@media (max-width: 375px) {
-  .bg {
-    display: block;
-
-    .container {
-      display: flex;
-    }
-  }
-}
