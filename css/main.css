@@ -4,63 +4,80 @@
   box-sizing: border-box;
 }
 
+root {
+  font-size: 15px;
+}
+
 .bg {
   font-size: 1rem;
   background-color: #090b1a;
   height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .bg .container {
   display: flex;
+  justify-content: space-between;
   background-color: #1b1938;
-  height: 400px;
-  width: 1000px;
-  border-radius: 10px;
+  max-width: 1080px;
+  min-height: 446px;
+  border-radius: 0.5rem;
 }
 .bg .container .information {
-  margin: 4.5rem;
+  width: 50%;
+  padding: 3.75rem;
+  margin-right: 0.9rem;
+  font-family: "Inter", sans-serif;
 }
 .bg .container .information .text {
-  margin-bottom: 3.5rem;
+  margin-bottom: 4rem;
 }
 .bg .container .information .text h1 {
-  color: #ffffff;
-  font-family: "Inter", sans-serif;
-  font-size: 2rem;
+  color: white;
+  font-weight: 700;
+  font-size: 2.35rem;
   margin-bottom: 1.5rem;
 }
 .bg .container .information .text h1 span {
   color: #aa5cdb;
 }
 .bg .container .information .text p {
-  color: #ffffff99;
-  font-family: "Inter", sans-serif;
-  font-size: 0.9rem;
-  line-height: 1.5rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1rem;
+  line-height: 1.75rem;
 }
 .bg .container .information .data {
   display: flex;
-  justify-content: space-between;
+}
+.bg .container .information .data .info {
+  margin-right: 4.125rem;
 }
 .bg .container .information .data .info h2 {
-  color: #ffffff;
-  font-family: "Inter", sans-serif;
+  color: white;
   margin-bottom: 0.5rem;
 }
 .bg .container .information .data .info p {
-  color: #ffffff99;
+  color: rgba(255, 255, 255, 0.6);
   font-family: "Lexend Deca", sans-serif;
-  font-size: 0.7rem;
   text-transform: uppercase;
+  font-size: 0.8rem;
 }
 .bg .container .bg-image {
+  background: linear-gradient(rgba(170, 92, 219, 0.3), rgba(170, 92, 219, 0.3)), url(../stats-preview-card-component-main/images/image-header-desktop.jpg);
   width: 50%;
-  background-color: #aa5cdb;
-}
-.bg .container .bg-image img {
-  opacity: 0.4;
+  border-radius: 0 0.5rem 0.5rem 0;
+  background-size: cover;
 }
 
-/* RESPONSIVO *//*# sourceMappingURL=main.css.map */
+/* RESPONSIVO */
+@media screen and (max-width: 1090px) {
+  .container {
+    flex-direction: column-reverse;
+    width: 90%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+}/*# sourceMappingURL=main.css.map */

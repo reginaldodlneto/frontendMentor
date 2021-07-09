@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+root {
+  font-size: 15px;
+}
+
 $font-primary: 'Inter', sans-serif;
 $font-secondary: 'Lexend Deca', sans-serif;
 
@@ -11,72 +15,82 @@ $font-secondary: 'Lexend Deca', sans-serif;
   font-size: 1rem;
   background-color: #090b1a;
   height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 
   .container {
     display: flex;
-    background-color: #1b1938;
-    height: 400px;
-    width: 1000px;
-    border-radius: 10px;
+    justify-content: space-between;
+    background-color: hsl(244, 38%, 16%);
+    max-width: 1080px;
+    min-height: 446px;
+    border-radius: 0.5rem;
 
     .information {
-      margin: 4.5rem;
+      width: 50%;
+      padding: 3.75rem;
+      margin-right: 0.9rem;
+      font-family: $font-primary;
 
       .text {
-        margin-bottom: 3.5rem;
-
+        margin-bottom: 4rem;
         h1 {
-          color: #ffffff;
-          font-family: $font-primary;
-          font-size: 2rem;
+          color: hsl(0, 0%, 100%);
+          font-weight: 700;
+          font-size: 2.35rem;
           margin-bottom: 1.5rem;
 
           span {
-            color: #aa5cdb;
+            color: hsl(277, 64%, 61%);
           }
         }
 
         p {
-          color: #ffffff99;
-          font-family: $font-primary;
-          font-size: 0.9rem;
-          line-height: 1.5rem;
+          color: hsla(0, 0%, 100%, 0.6);
+          font-size: 1rem;
+          line-height: 1.75rem;
         }
       }
 
       .data {
         display: flex;
-        justify-content: space-between;
 
         .info {
+          margin-right: 4.125rem;
           h2 {
-            color: #ffffff;
-            font-family: $font-primary;
+            color: hsl(0, 0%, 100%);
             margin-bottom: 0.5rem;
           }
 
           p {
-            color: #ffffff99;
+            color: hsla(0, 0%, 100%, 0.6);
             font-family: $font-secondary;
-            font-size: 0.7rem;
             text-transform: uppercase;
+            font-size: 0.8rem;
           }
         }
       }
     }
-
     .bg-image {
+      background: linear-gradient(
+          hsla(277, 64%, 61%, 0.3),
+          hsla(277, 64%, 61%, 0.3)
+        ),
+        url(../stats-preview-card-component-main/images/image-header-desktop.jpg);
       width: 50%;
-      background-color: #aa5cdb;
-
-      img {
-        opacity: 0.4;
-      }
+      border-radius: 0 0.5rem 0.5rem 0;
+      background-size: cover;
     }
   }
 }
 
 /* RESPONSIVO */
+@media screen and (max-width: 1090px) {
+  .container {
+    flex-direction: column-reverse;
+    width: 90%;
+    height: max-content;
+  }
+}
