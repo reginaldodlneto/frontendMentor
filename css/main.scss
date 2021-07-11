@@ -13,97 +13,106 @@ $font-secondary: 'Lexend Deca', sans-serif;
 
 body {
   background-color: hsl(233, 47%, 7%);
+  text-align: center;
+}
 
-  .container {
-    background-color: hsl(244, 38%, 16%);
+.container {
+  background-color: hsl(244, 38%, 16%);
+  width: 90%;
+  margin: 6rem auto;
+  border-radius: 0.666rem;
 
-    width: 90%;
-    margin: 6rem auto;
-    height: 800px;
-    border-radius: 0.666rem;
+  .bg-image {
+    position: relative;
 
-    .bg-image {
-      background: linear-gradient(
-          hsla(277, 64%, 61%, 0.3),
-          hsla(277, 64%, 61%, 0.3)
-        ),
-        url(../stats-preview-card-component-main/images/image-header-mobile.jpg);
-      background-size: cover;
-      min-height: 30%;
-      margin-bottom: 2.5rem;
+    .wrapper {
+      background-color: hsl(277, 64%, 61%, 0.4);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 99%;
       border-radius: 0.666rem 0.666rem 0 0;
     }
+    img {
+      width: 100%;
+      border-radius: 0.666rem 0.666rem 0 0;
+    }
+  }
 
-    .information {
-      max-height: 70%;
-      text-align: center;
-      margin: 1.25rem;
+  .information {
+    align-content: center;
+    padding: 2rem;
 
-      .text {
-        margin-bottom: 2.5rem;
-        h1 {
+    .text {
+      h1 {
+        color: hsl(0, 0%, 100%);
+        font-size: 1.75rem;
+        font-family: $font-primary;
+        margin-bottom: 1.5rem;
+
+        span {
+          color: hsl(277, 64%, 61%);
+        }
+      }
+
+      p {
+        font-family: $font-primary;
+        color: hsla(0, 0%, 100%, 0.75);
+        line-height: 1.75rem;
+      }
+    }
+
+    .data {
+      .info {
+        margin-top: 2rem;
+
+        h2 {
           font-family: $font-primary;
           color: hsl(0, 0%, 100%);
-          font-size: 2rem;
-          margin-bottom: 1rem;
-
-          span {
-            color: hsl(277, 64%, 61%);
-          }
         }
 
         p {
-          font-family: $font-primary;
-          color: hsla(0, 0%, 100%, 0.75);
-          line-height: 1.75rem;
+          font-family: $font-secondary;
+          color: hsla(0, 0%, 100%, 0.6);
+          text-transform: uppercase;
+          font-size: 0.75rem;
         }
       }
-
-      .data {
-        .info {
-          margin-bottom: 2rem;
-          h2 {
-            font-family: $font-primary;
-            color: hsl(0, 0%, 100%);
-          }
-
-          p {
-            font-family: $font-secondary;
-            color: hsla(0, 0%, 100%, 0.75);
-            text-transform: uppercase;
-            font-size: 0.7rem;
-          }
-        }
-      }
-    }
-  }
-  .attribution {
-    background-color: hsl(244, 38%, 16%);
-    color: hsl(0, 0%, 100%);
-    font-family: $font-primary;
-    text-align: center;
-    font-size: 0.7rem;
-    padding: 1rem;
-
-    a {
-      color: hsl(277, 64%, 61%);
-      text-decoration: none;
     }
   }
 }
+.attribution {
+  background-color: hsl(244, 38%, 16%);
+  color: hsl(0, 0%, 100%);
+  font-family: $font-primary;
+  text-align: center;
+  font-size: 0.7rem;
+  padding: 1rem;
 
-@media (min-width: 560px) {
-  .container {
-    .bg-image {
-      height: 46%;
+  a {
+    color: hsl(277, 64%, 61%);
+    text-decoration: none;
+  }
+}
+
+@media (min-width: 613px) {
+  .data {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media (min-width: 845px) {
+  .information {
+    display: flex;
+
+    .text {
+      padding: 3rem;
     }
-    .information {
-      .data {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin-top: 5rem;
-      }
+
+    .data {
+      flex-direction: column;
     }
   }
 }
@@ -112,15 +121,67 @@ body {
   .container {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: center;
-    align-items: center;
+    border-radius: 0.666rem;
 
     .bg-image {
-      width: 50%;
+      width: 100%;
+      img {
+        border-radius: 0 0.666rem 0.666rem 0;
+        width: 100%;
+      }
+
+      .wrapper {
+        border-radius: 0 0.666rem 0.666rem 0;
+        width: 100%;
+      }
     }
 
     .information {
-      width: 50%;
+      width: 100%;
+      display: block;
+      text-align: center;
+
+      .text {
+        margin-right: 0;
+        padding: 0;
+      }
+
+      .data {
+        flex-direction: row;
+      }
+    }
+  }
+}
+
+@media (min-width: 1300px) {
+  .container {
+    .information {
+      text-align: left;
+      padding: 3rem;
+
+      .text {
+        h1 {
+          font-size: 3rem;
+        }
+
+        p {
+          font-size: 1.5rem;
+        }
+      }
+
+      .data {
+        justify-content: space-between;
+        margin-top: 3rem;
+        .info {
+          h2 {
+            font-size: 2rem;
+          }
+
+          p {
+            font-size: 0.9rem;
+          }
+        }
+      }
     }
   }
 }
